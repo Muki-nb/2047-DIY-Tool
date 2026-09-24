@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIY 制卡器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="panel form-panel">
+      <label class="field">
+        <span>卡名</span>
+        <input id="name" type="text" value="黑鲨" maxlength="12">
+      </label>
+
+      <div class="row">
+        <label class="field">
+          <span>能耗</span>
+          <input id="c" type="text" value="5" maxlength="3">
+        </label>
+        <label class="field">
+          <span>力量</span>
+          <input id="a" type="text" value="5" maxlength="3" placeholder="留空则不显示">
+        </label>
+      </div>
+
+      <div class="row">
+        <label class="field">
+          <span>阵营</span>
+          <select id="l">
+            <option value="1">矩阵</option>
+            <option value="2">智械</option>
+            <option value="3">帝国</option>
+            <option value="4">联邦</option>
+            <option value="5">祸岛</option>
+            <option value="6">蜂巢</option>
+            <option value="7">中立</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>品质</span>
+          <select id="k">
+            <option value="白">白</option>
+            <option value="蓝">蓝</option>
+            <option value="紫">紫</option>
+            <option value="橙">橙</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="field">
+        <span>卡图（可选，点击选择或拖入图片）</span>
+        <div class="row">
+          <input id="cardImage" type="file" accept="image/*">
+          <button id="clearImage" class="ghost" type="button">移除卡图</button>
+        </div>
+      </label>
+
+      <label class="field checkbox-field">
+        <input id="sp" type="checkbox">
+        <span>异画（使用 sp 卡框）</span>
+      </label>
+
+      <label class="field">
+        <span>描述（每行一条）</span>
+        <textarea id="description" rows="6" spellcheck="false">进场时：获得一张入侵</textarea>
+      </label>
+
+      <p class="hint">
+        描述中可用 <code>&lt;b&gt;文本&lt;/b&gt;</code> 加粗、<code>&lt;i&gt;文本&lt;/i&gt;</code> 斜体。
+      </p>
+
+      <div class="actions">
+        <button id="download" class="primary">下载 PNG</button>
+      </div>
+    </section>
+
+    <section class="panel preview-panel" id="previewPanel">
+      <canvas id="cardCanvas" width="560" height="901"></canvas>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

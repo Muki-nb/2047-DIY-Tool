@@ -1,0 +1,34 @@
+# 依赖与产物
+node_modules/
+out.png
+test.png
+
+# 原始制图脚本（已被网页版取代）
+make.js
+draw.js
+
+# 思维导图源文件
+card.mdp
+card2.mdp
+
+# 旧版资源目录
+old/
+
+# 未使用的图片资源
+101116.png
+s1.png
+s2.png
+s3.png
+s4.png
+s5.png
+s6.png
+s7.png
+d1sp.png
+d2sp.png
+d3sp.png
+d4sp.png
+d5sp.png
+d6sp.png
+d7sp.png
+L8.png
+L8sp.png
